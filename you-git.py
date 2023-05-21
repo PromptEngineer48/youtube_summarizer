@@ -10,7 +10,8 @@ import streamlit as st
 st.title('🦜️🔗 Youtube Summarizer :red[Toolbox]')
 
 import os
-os.environ["OPENAI_API_KEY"] = 'YOUR-API_KEY'
+api_key = st.text_input("Paste Your open API key")
+os.environ["OPENAI_API_KEY"] = api_key
 
 llm = OpenAI(temperature=0) #Temp controls the randomness of the text
 
