@@ -1,4 +1,4 @@
-pip install youtube-transcript-api, langchain, tiktoken, streamlit
+!pip install youtube-transcript-api, langchain, tiktoken, streamlit
 
 from langchain.document_loaders import YoutubeLoader
 from langchain import OpenAI
