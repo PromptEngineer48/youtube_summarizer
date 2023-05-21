@@ -1,4 +1,4 @@
-#pip install youtube-transcript-api, langchain, tiktoken, streamlit
+pip install youtube-transcript-api, langchain, tiktoken, streamlit
 
 from langchain.document_loaders import YoutubeLoader
 from langchain import OpenAI
@@ -10,8 +10,9 @@ import streamlit as st
 st.title('🦜️🔗 Youtube Summarizer :red[Toolbox]')
 
 import os
-api_key = st.text_input("Paste Your open API key")
-os.environ["OPENAI_API_KEY"] = api_key
+api_key = st.text_input("Paste the OpenAI API Key")
+if api_key:
+    os.environ["OPENAI_API_KEY"] = api_key
 
 llm = OpenAI(temperature=0) #Temp controls the randomness of the text
 
